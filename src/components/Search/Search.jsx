@@ -11,7 +11,7 @@ const Search = () => {
           placeholder="Search Employee"
           aria-label="Search"
         />
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">
           Search
         </button>
       </form>

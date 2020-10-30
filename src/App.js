@@ -1,5 +1,6 @@
-import Header from './components/Header.jsx';
-import Search from './components/Search.jsx';
+import Header from './components/Header/Header.jsx';
+import Search from './components/Search/Search.jsx';
+import Table from './components/Employee-Table/Table.jsx';
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
     <Header />
     <Search />
+    <Table />
     </div>
   );
 }
