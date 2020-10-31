@@ -1,41 +1,42 @@
-import React from 'react';
+import React from "react";
 
-const Table = () => {
-    return (
+const Table = (props) => {
+  return (
+    <div>
+      <div>
         <div className="table">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Image</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">DOB</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
+          <table className="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">DOB</th>
+              </tr>
+            </thead>
+            <tbody>
+              {props.searchData.map((search) => (
+                <tr>
+                  <td>
+                    <img src={search.picture.medium} alt="" />
+                  </td>
+                  <td>
+                    {search.name.first}
+                    {search.name.last}
+                  </td>
+                  <td>{search.phone}</td>
+                  <td>{search.email}</td>
+                  <td>{search.dob.date}</td>
+                </tr>
+              ))}
+              ;
+            </tbody>
+          </table>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Table;
